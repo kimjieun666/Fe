@@ -4,9 +4,9 @@ import { RippleEffect } from './RippleEffect';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Deep space background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-950">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Deep space background */}
+        <div className="absolute inset-0 bg-black">
         {/* Stars field */}
         {Array.from({ length: 80 }).map((_, i) => (
           <motion.div
@@ -95,20 +95,20 @@ export function HeroSection() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           <GlowText
-            text="EXPLORE THE COSMOS"
+            text="EXPLORE THE WORK HUB"
             className="text-6xl md:text-8xl text-white font-medium mb-6"
             delay={1}
           />
         </motion.div>
 
         <TypewriterText
-          text="Journey through the infinite darkness of deep space"
+          text="모든 프로젝트의 중심이 되는 공간"
           className="text-xl md:text-2xl text-blue-100/60 mb-8"
           delay={2}
         />
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex justify-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 3 }}
@@ -119,17 +119,7 @@ export function HeroSection() {
               whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(59, 130, 246, 0.3)' }}
               whileTap={{ scale: 0.95 }}
             >
-              Start Exploring
-            </motion.button>
-          </RippleEffect>
-          
-          <RippleEffect className="inline-block">
-            <motion.button
-              className="px-8 py-3 border border-sky-400/30 text-sky-100 font-medium rounded-full hover:bg-sky-500/5 hover:border-sky-400/50 transition-all duration-300"
-              whileHover={{ scale: 1.05, borderColor: 'rgba(56, 189, 248, 0.6)' }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Learn More
+              Sign in
             </motion.button>
           </RippleEffect>
         </motion.div>

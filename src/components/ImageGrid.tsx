@@ -24,13 +24,13 @@ const cosmicImages = [
     src: 'https://images.unsplash.com/photo-1614314149691-52f1ac2c9c40?w=500&h=500&fit=crop',
     alt: 'Astronaut',
     title: 'Space Explorer',
-    description: 'Human exploration of the cosmos'
+    description: 'Human exploration of the Work Hub'
   },
   {
     src: 'https://images.unsplash.com/photo-1517026575980-3e1e2dedeab4?w=500&h=500&fit=crop',
     alt: 'Solar System',
     title: 'Solar System',
-    description: 'Our cosmic neighborhood'
+    description: 'Our Work Hub'
   },
   {
     src: 'https://images.unsplash.com/photo-1516849841032-87cbac4d88f7?w=500&h=500&fit=crop',
@@ -42,7 +42,7 @@ const cosmicImages = [
 
 export function ImageGrid() {
   return (
-    <section className="py-20 px-4">
+    <section className="py-10 px-4">
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="text-center mb-16"
@@ -51,10 +51,6 @@ export function ImageGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl text-white mb-4">Cosmic Gallery</h2>
-          <p className="text-white/70 max-w-2xl mx-auto">
-            Explore the breathtaking beauty of our universe through these stunning cosmic phenomena
-          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

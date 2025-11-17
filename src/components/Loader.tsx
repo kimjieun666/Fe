@@ -25,7 +25,7 @@ export function Loader({ onComplete }: LoaderProps) {
 
   return (
     <motion.div
-      className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-blue-950 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-gradient-to-br from-black via-slate-950 to-blue-950/80 flex items-center justify-center z-50"
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
@@ -52,7 +52,7 @@ export function Loader({ onComplete }: LoaderProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
-          COSMOS
+          WORK HUB
         </motion.h1>
         
         <div className="w-64 h-2 bg-white/10 rounded-full overflow-hidden">

@@ -1,7 +1,7 @@
 
-  # Cosmos Website with Animations (Community)
+  # Work Hub Website with Animations (Community)
 
-  This is a code bundle for Cosmos Website with Animations (Community). The original project is available at https://www.figma.com/design/oiPG4QyxP5Vs40GitYa7Ry/Cosmos-Website-with-Animations--Community-.
+  This is a code bundle for Work Hub Website with Animations (Community). The original project is available at https://www.figma.com/design/oiPG4QyxP5Vs40GitYa7Ry/Work Hub-Website-with-Animations--Community-.
 
   ## Running the code
 

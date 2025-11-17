@@ -4,39 +4,54 @@ import { RippleEffect } from './RippleEffect';
 
 const teamMembers = [
   {
-    name: 'Dr. Sarah Chen',
-    role: 'Astrophysicist',
+    name: 'Yunyeong Kim',
+    role: '팀장',
     image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
-    bio: 'Leading research in exoplanet discovery and characterization',
-    speciality: 'Exoplanets'
+    speciality: '특징',
+    github: 'https://github.com/onuyyy'
   },
   {
-    name: 'Dr. Marcus Rodriguez',
-    role: 'Cosmologist',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
-    bio: 'Expert in dark matter and cosmic microwave background',
-    speciality: 'Dark Matter'
+    name: 'Gunhee Cho',
+    role: '부팀장',
+    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
+    speciality: '특징',
+    github: 'https://github.com/dkqpeo'
   },
   {
-    name: 'Dr. Aisha Patel',
-    role: 'Planetary Scientist',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
-    bio: 'Studying planetary formation and atmospheric dynamics',
-    speciality: 'Planetary Formation'
+    name: 'Jieun Kim',
+    role: '팀원',
+    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
+    speciality: '특징',
+    github: 'https://github.com/kimjieun666'
   },
   {
-    name: 'Dr. James Thompson',
-    role: 'Space Engineer',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=300&fit=crop',
-    bio: 'Designing next-generation space exploration vehicles',
-    speciality: 'Spacecraft Design'
-  }
+    name: 'Ayeon Kwon',
+    role: '팀원',
+    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
+    speciality: '특징',
+    github: 'https://github.com/zneda330'
+  },
+    {
+    name: 'Jaewoong Yang',
+    role: '팀원',
+    image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
+    speciality: '특징',
+    github: 'https://github.com/JWoong-01'
+    },
+    {
+        name: 'Kyungseo Cho',
+        role: '팀원',
+        image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
+        speciality: '특징',
+        github: 'https://github.com/willbewallstreet'
+    }
 ];
 
 export function TeamSection() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-black via-gray-900/30 to-blue-950/20">
+    <section className="py-20 px-4 bg-black">
       <div className="max-w-7xl mx-auto">
+        
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
@@ -44,16 +59,20 @@ export function TeamSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl text-white font-medium mb-4">Our Cosmic Team</h2>
+          <h2 className="text-4xl text-white font-medium mb-4">Our Team</h2>
           <p className="text-blue-100/50 max-w-2xl mx-auto">
-            Meet the brilliant minds pushing the boundaries of our understanding of the universe
+              Meet the innovators behind our project.
+              Dive into their GitHub profiles to see their craftsmanship, code, and the expertise that brings our vision to life.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={member.github}
+              target={member.github ? "_blank" : undefined}
+              rel={member.github ? "noreferrer" : undefined}
               className="group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -126,8 +145,6 @@ export function TeamSection() {
                 <div className="text-center">
                   <h3 className="text-white text-lg font-medium mb-1">{member.name}</h3>
                   <p className="text-sky-300 text-sm mb-2">{member.role}</p>
-                  <p className="text-blue-100/50 text-sm mb-3">{member.bio}</p>
-                  
                   <motion.div
                     className="inline-block px-3 py-1 bg-gradient-to-r from-blue-950/40 to-sky-950/30 text-sky-200 text-xs font-medium rounded-full border border-blue-400/20"
                     whileHover={{ 
@@ -140,7 +157,7 @@ export function TeamSection() {
                   </motion.div>
                 </div>
               </RippleEffect>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

@@ -5,7 +5,6 @@ import { Navigation } from './components/Navigation';
 import { HeroSection } from './components/HeroSection';
 import { ImageGrid } from './components/ImageGrid';
 import { TeamSection } from './components/TeamSection';
-import { InfiniteMarquee } from './components/InfiniteMarquee';
 import { FadeInText } from './components/TextAnimation';
 
 export default function App() {
@@ -34,7 +33,7 @@ export default function App() {
               
               <motion.section
                 id="explore"
-                className="py-20 px-4 bg-gradient-to-b from-black via-gray-900/40 to-blue-950/30"
+                className="py-20 px-4 bg-black"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -42,12 +41,13 @@ export default function App() {
               >
                 <div className="max-w-4xl mx-auto text-center">
                   <FadeInText
-                    text="Discover the Wonders of Space"
+                    text="프로젝트 관리의 새로운 표준을 제시합니다"
                     className="text-4xl text-white font-medium mb-6"
                   />
                   <FadeInText
-                    text="From distant galaxies to mysterious black holes, explore the infinite beauty and complexity of our universe. Each celestial object tells a story billions of years in the making."
-                    className="text-blue-100/70 text-lg leading-relaxed"
+                    text={`계약부터 납품까지, 모든 과정을 하나의 체계 안에서 정확하고 투명하게 운영하세요.
+각 승인, 기록, 자료가 명확히 축적되어 고객사와의 협업 품질을 한 단계 높입니다.`}
+                    className="text-blue-100/70 text-lg leading-relaxed whitespace-pre-line"
                     delay={0.3}
                   />
                 </div>
@@ -79,12 +79,10 @@ export default function App() {
 
               <ImageGrid />
               
-              <InfiniteMarquee />
-              
               <TeamSection />
               
               <motion.footer
-                className="py-12 px-4 bg-gradient-to-r from-black via-gray-900/60 to-blue-950/40 border-t border-blue-400/10"
+                className="py-12 px-4 bg-gradient-to-b from-black via-gray-900/40 to-blue-950/40"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -95,15 +93,17 @@ export default function App() {
                     className="flex items-center justify-center space-x-2 mb-4"
                     whileHover={{ scale: 1.05 }}
                   >
-                    <motion.div
-                      className="w-6 h-6 bg-gradient-to-r from-blue-400 to-sky-300 rounded-full"
+                    <motion.img
+                      src="/logo.png"
+                      alt="Work Hub logo"
+                      className="w-8 h-8"
                       animate={{ rotate: 360 }}
                       transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                     />
-                    <span className="text-white text-xl font-medium">COSMOS</span>
+                    <span className="text-white text-xl font-medium">WORK HUB</span>
                   </motion.div>
                   <p className="text-blue-100/50">
-                    © 2025 Cosmos. Exploring the universe, one discovery at a time.
+                    © 2025 Work Hub. Guiding your project from contract to delivery with precision.
                   </p>
                   
                   {/* Deep space particles */}

@@ -6,15 +6,14 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: 'Home', icon: Star, href: '#home' },
-    { name: 'Explore', icon: Telescope, href: '#explore' },
-    { name: 'Missions', icon: Rocket, href: '#missions' },
-    { name: 'About', icon: Globe, href: '#about' },
+    { name: 'Home', icon: Star, href: 'home' },
+    { name: 'about', icon: Telescope, href: 'about' },
+    { name: 'page', icon: Rocket, href: 'page' },
   ];
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 right-0 z-40 bg-black/90 backdrop-blur-md border-b border-blue-400/10"
+      className="fixed top-0 left-0 right-0 z-40 bg-black/70 backdrop-blur-md border-b border-blue-400/10"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -25,12 +24,14 @@ export function Navigation() {
             className="flex items-center space-x-2"
             whileHover={{ scale: 1.05 }}
           >
-            <motion.div
-              className="w-8 h-8 bg-gradient-to-r from-blue-400 to-sky-300 rounded-full"
+            <motion.img
+              src="/logo.png"
+              alt="Work Hub logo"
+              className="w-8 h-8"
               animate={{ rotate: 360 }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
             />
-            <span className="text-white text-xl font-medium">COSMOS</span>
+            <span className="text-white text-xl font-medium">WORK HUB</span>
           </motion.div>
 
           {/* Desktop Menu */}
